@@ -1,4 +1,4 @@
-package lesson1;
+package section1;
 
 public class ArrayEx {
     public static void main(String[] args) {
