@@ -1,4 +1,4 @@
-package section2;
+package Chapter_1.section2;
 
 public class IsPrime {
     public static void main(String[] args) {
