@@ -1,4 +1,4 @@
-package section1;
+package Chapter_1.section1;
 
 public class StringEx {
     static int num;
