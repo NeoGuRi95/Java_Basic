@@ -1,15 +1,18 @@
 package chapter_3.section4;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Scanner;
 
 public class Scheduler {
 
-    private int capacity = 100;
+    //private int capacity = 100;
+    public ArrayList<Event> events = new ArrayList<>();
     // Generic Programming
     // 서로 다른 데이터 타입을 '하나의 데이터 타입 배열'에 저장할 수 있다.
-    public Event[] events = new Event[capacity];
-    public int n = 0;
+    //public Event[] events = new Event[capacity];
+    //public int n = 0;
     private Scanner kb;
 
     public void processCommand() {
@@ -31,7 +34,7 @@ public class Scheduler {
             } else if (command.equals("show")) {
                 handelShow();
             } else if (command.equals("sort")) {
-                Arrays.sort(events, 0, n);
+                Collections.sort(events);
             } else if (command.equals("exit")) {
                 break;
             }
@@ -42,17 +45,17 @@ public class Scheduler {
     private void handelShow() {
         String dateString = kb.next();
         MyDate theDate = parseDateString(dateString);
-        for (int i = 0; i < n; i++) {
+        for ( Event ev: events) {
             // test if events[i] is relevant to the date, then print it;
-            if (events[i].isRelevant(theDate))
-                System.out.println("    " + events[i].toString());
+            if (ev.isRelevant(theDate))
+                System.out.println("    " + ev.toString());
         }
     }
 
     private void handleList() {
-        for (int i = 0; i < n; i++) {
-            System.out.println("    " + events[i].toString());
-        }
+        //for (int i = 0; i < events.size(); i++)
+        for ( Event ev : events) // enhanced for loop
+            System.out.println("    " + ev.toString());
     }
 
     private void handelAddDeadLineEvent() {
@@ -95,18 +98,16 @@ public class Scheduler {
     }
 
     private void addEvent(Event ev) {
-        if (n >= capacity)
-            reallocate();
-        events[n++] = ev;
+        events.add(ev);
     }
 
-    private void reallocate() {
-        Event[] tmp = new Event[capacity * 2];
-        for (int i = 0; i < n; i++)
-            tmp[i] = events[i];
-        events = tmp;
-        capacity *= 2;
-    }
+//    private void reallocate() {
+//        Event[] tmp = new Event[capacity * 2];
+//        for (int i = 0; i < n; i++)
+//            tmp[i] = events[i];
+//        events = tmp;
+//        capacity *= 2;
+//    }
 
     private MyDate parseDateString(String dateString) {
         String [] tokens = dateString.split("/");
