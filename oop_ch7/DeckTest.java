@@ -1,10 +1,10 @@
-package oop_practice;
+package oop_ch7;
 
 public class DeckTest {
     public static void main(String[] args) {
         Deck d = new Deck();
         Card c = d.pick();
-        System.out.println(c);
+        System.out.println(c.toString());
 
         d.shuffle();
         c = d.pick(0);
