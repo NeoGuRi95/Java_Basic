@@ -1,4 +1,4 @@
-package oop_ch6;
+package java_basic_ch6;
 
 public class CardTest {
     public static void main(String[] args) {

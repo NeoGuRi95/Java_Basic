@@ -1,4 +1,4 @@
-package oop_ch7;
+package java_basic_ch7;
 
 public class Student implements MyComparable<Student> {
     private int kor;

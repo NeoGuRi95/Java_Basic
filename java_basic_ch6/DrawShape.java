@@ -1,4 +1,4 @@
-package oop_ch6;
+package java_basic_ch6;
 
 import java.util.Arrays;
 

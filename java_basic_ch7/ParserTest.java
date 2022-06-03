@@ -1,4 +1,4 @@
-package oop_ch7;
+package java_basic_ch7;
 
 interface Parseable {
     public abstract void parse(String fileName);

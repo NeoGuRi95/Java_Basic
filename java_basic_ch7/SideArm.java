@@ -1,12 +1,12 @@
-package oop_ch7;
+package java_basic_ch7;
 
-public class UnderHand  extends Pitcher implements Pitchable {
+public class SideArm extends Pitcher implements Pitchable {
 
-    String type;
+    private String type;
 
-    public UnderHand(String name, String team) {
+    SideArm(String name, String team) {
         super(name, team);
-        this.type = "Under Hand";
+        this.type = "Side Arm";
     }
 
     @Override

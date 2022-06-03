@@ -1,4 +1,4 @@
-package oop_ch7;
+package java_basic_ch7;
 
 final class Singleton {
     private static Singleton s = new Singleton(); // 미리 인스턴스 생성
