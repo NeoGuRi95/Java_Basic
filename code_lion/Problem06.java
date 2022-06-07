@@ -2,7 +2,6 @@ package code_lion;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.Stack;
 
 public class Problem06 {
 
